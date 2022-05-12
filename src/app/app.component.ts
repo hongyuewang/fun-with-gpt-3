@@ -45,13 +45,13 @@ export class AppComponent {
       return value.choices[0].text;
     });
 
-    this.htmlToAdd += `<table class="table">
+    this.htmlToAdd = `<br><table class="table">
     <thead></thead>
     <tbody>
     <tr><th scope="row">Prompt</th><td>${formData.prompt}</td></tr>
     <tr><th scope="row">Response</th><td>${responseText}</td></tr>
     </tbody>
     </table>
-    <br>`
+    <br>` + this.htmlToAdd;
   }
 }

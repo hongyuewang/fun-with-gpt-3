@@ -12,6 +12,8 @@
 <body>
     <h1>Fun With GPT-3</h1>
 
+    <p>Generative Pre-trained Transformer 3 (GPT-3) an autoregressive language model created by OpenAI that uses deep learning to produce human-like text.</p>
+
     <form  #promptForm = "ngForm" (ngSubmit) = "onClickSubmit(promptForm.value)" >
         <div class="form-group">
             <label for="prompt">Enter prompt:</label>
@@ -19,7 +21,7 @@
         </div>
         <button type="submit" class="btn btn-primary mb-2">Submit</button>
     </form> 
-
+    <br>
     <h2>Responses</h2>
     <div class="container" [innerHtml]="htmlToAdd"></div>
 </body>
