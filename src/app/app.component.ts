@@ -14,7 +14,7 @@ export class AppComponent {
 
   ngOnInit(): void {}
 
-  htmlToAdd = "";
+  htmlToAdd = '';
 
   async onClickSubmit(formData: { prompt: string }) {
     const data = {
@@ -26,7 +26,7 @@ export class AppComponent {
       presence_penalty: 0.0,
     };
 
-    let responseText = "";
+    let responseText = '';
 
     const res = fetch(
       'https://api.openai.com/v1/engines/text-curie-001/completions',
@@ -41,17 +41,20 @@ export class AppComponent {
       }
     );
 
-    responseText = await res.then(value => value.json()).then(function(value) {
-      return value.choices[0].text;
-    });
+    responseText = await res
+      .then((value) => value.json())
+      .then(function (value) {
+        return value.choices[0].text;
+      });
 
-    this.htmlToAdd = `<br><table class="table">
-    <thead></thead>
-    <tbody>
-    <tr><th scope="row">Prompt</th><td>${formData.prompt}</td></tr>
-    <tr><th scope="row">Response</th><td>${responseText}</td></tr>
-    </tbody>
-    </table>
-    <br>` + this.htmlToAdd;
+    this.htmlToAdd =
+      `<br><table class="table">
+      <thead></thead>
+      <tbody>
+      <tr><th scope="row">Prompt</th><td>${formData.prompt}</td></tr>
+      <tr><th scope="row">Response</th><td>${responseText}</td></tr>
+      </tbody>
+      </table>
+      <br>` + this.htmlToAdd;
   }
 }
