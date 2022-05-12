@@ -6,4 +6,4 @@ Created for the Shopify Front End Developer Intern Challenge.
 
 https://fun-with-gpt-3.web.app/
 
-Note: a variable named *apiKey* must be assigned to the OpenAI API Key in the file *environment.ts*.
+Note: a variable named *apiKey* must be assigned to an OpenAI API key in the file *environment.ts*.
