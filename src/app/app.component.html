@@ -12,11 +12,11 @@
 <body>
     <h1>Fun With GPT-3</h1>
 
-    <p>Generative Pre-trained Transformer 3 (GPT-3) an autoregressive language model created by OpenAI that uses deep learning to produce human-like text.</p>
+    <p>Generative Pre-trained Transformer 3 (GPT-3) is an autoregressive language model created by OpenAI that uses deep learning to produce human-like text.</p>
 
     <form  #promptForm = "ngForm" (ngSubmit) = "onClickSubmit(promptForm.value)" >
         <div class="form-group">
-            <label for="prompt">Enter prompt:</label>
+            <label for="prompt"><b>Enter prompt:</b></label>
             <textarea class="form-control" id="prompt" name="prompt" rows="3" ngModel></textarea>
         </div>
         <button type="submit" class="btn btn-primary mb-2">Submit</button>
